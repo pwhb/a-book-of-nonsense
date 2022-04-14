@@ -18,11 +18,20 @@
         padding: 2rem;
         border-radius: 1rem;
       }
+      img {
+        background: rgb(230, 228, 228);
+        max-width: 20rem;
+        padding: 0.3rem;
+        border-radius: 1rem;
+      }
     </style>
   </head>
   <body>
     <h1>#{{.Id}}</h1>
-    {{.Image}}
+    <img
+      src="https://github.com/pwhb/a-book-of-nonsense/blob/main/images/{{.Image}}?raw=true"
+      alt="{{.Id}}"
+    />
     <div class="poem">
       {{range .Lines}}
       <p>{{.}}</p>
